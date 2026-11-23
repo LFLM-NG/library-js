@@ -1,14 +1,14 @@
 const myLibrary = [
     {
-        id: `1234567890`,
         title: `Book 1`,
         author: `John Doe`,
+        id: `1234567890`,
         isRead: false,
     },
     {
-        id: `0987654321`,
         title: `Book 2`,
         author: `John Doe`,
+        id: `0987654321`,
         isRead: false,
     },
 ];
@@ -29,19 +29,28 @@ function addBookToLibrary(title, author, isRead) {
     myLibrary.push(book);
 }
 
+function createButton(buttonClass, buttonText) {
+    const buttonElement = document.createElement(`button`);
+    buttonElement.classList.add(buttonClass);
+    buttonElement.textContent = buttonText;
+    return buttonElement;
+}
+
 function addBookToDisplay(book) {
     const display = document.querySelector(`#book-list`);
     const row = document.createElement(`tr`);
-    // const style = 
-    
-    row.innerHTML = `
-    <td>${book.title}</td>
-    <td>${book.author}</td>
-    <td>${book.id}</td>
-    <td>${(book.isRead) ? 'Yes' : 'No'}</td>
-    <td><button type="button" class="button-read">Read</button><button type="button" class="button-delete">Remove</button></td>
-    `;
-
+    Object.values(book).forEach(value => {
+        const td = document.createElement(`td`);
+        if (typeof value === `boolean`) { td.textContent = (value) ? `Yes` : `No` }
+        else { td.textContent = value; }
+        row.appendChild(td);
+    });
+    const tdButton = document.createElement(`td`);
+    const buttonRead = createButton(`button-read`, `Read`);
+    const buttonDelete = createButton(`button-delete`, `Remove`);
+    tdButton.appendChild(buttonRead);
+    tdButton.appendChild(buttonDelete);
+    row.append(tdButton);
     display.appendChild(row);
 }
 

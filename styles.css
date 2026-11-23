@@ -50,7 +50,7 @@ table {
     text-align: left;
 }
 
-th, tr {
+th, tr, td {
     border: 1px;
     border-style: solid none;
     padding: 0.5rem;
