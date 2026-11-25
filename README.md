@@ -1,5 +1,5 @@
 # library-js
-Basic JavaScript Library App
+Basic JavaScript Library App based on design by [Traversy Media](https://youtu.be/JaMCxVWtW58)
 
 ## Features
 
