@@ -6,6 +6,7 @@ Basic JavaScript Library App
 - Add books to library listing from User Form
 - Remove books in library listing
 - Toggle read status of individual books 
+- Notification for Adding/Removing books
 
 ## Notes
 

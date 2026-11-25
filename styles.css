@@ -7,6 +7,8 @@
 :root {
     --primary-color: #0d6efd;
     --danger-color: #dc3545;
+    --success-color: #198754;
+    --warning-color: #ffc107;
 }
 
 body {
@@ -74,4 +76,20 @@ th, tr, td {
 
 .button-delete {
     background-color: var(--danger-color);
+}
+
+.alert {
+    display: flex;
+    padding: 1rem 0.5rem;
+    margin: 1rem 0;
+    color: white;
+    border-radius: 5px;
+}
+
+.alert.success {
+    background-color: var(--success-color);
+}
+
+.alert.remove {
+    background-color: var(--warning-color);
 }
