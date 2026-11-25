@@ -1,12 +1,12 @@
 # library-js
 Basic JavaScript Library App
 
-#Features
+## Features
 
 - Add books to library listing from User Form
 - Remove books in library listing
 - Toggle read status of individual books 
 
-#Notes
+## Notes
 
 - No persistent storage
