@@ -10,3 +10,4 @@ Basic JavaScript Library App
 ## Notes
 
 - No persistent storage
+- No form validation
